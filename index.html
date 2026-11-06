@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pizzería Fratelli · Pizzas y pastas caseras en Madrid</title>
+    <meta name="description" content="Carta de Pizzería Fratelli en Aluche (Madrid): entrantes, pastas caseras, pizzas medianas y familiares y postres. Prepara un pedido de demostración y encuentra cómo contactar.">
+    <meta name="theme-color" content="#a3120f">
+    <link rel="preload" href="data/menu.json" as="fetch" type="application/json" crossorigin>
+    <link rel="stylesheet" href="styles/site.css">
+    <script type="module" src="scripts/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <p class="brand" aria-hidden="true">Fratelli</p>
+        <nav aria-label="Navegación principal">
+          <ul class="site-nav">
+            <li><a href="#menu">Carta</a></li>
+            <li><a href="#cart">Tu pedido <span class="cart-badge" data-cart-count hidden></span></a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section id="restaurant" class="hero" aria-labelledby="restaurant-name">
+        <div class="container hero__inner" data-restaurant></div>
+      </section>
+
+      <div class="container order-layout">
+        <section id="menu" class="menu" aria-labelledby="menu-title">
+          <h2 id="menu-title">Nuestra carta</h2>
+          <p class="menu__status" data-menu-status role="status">Cargando la carta…</p>
+          <nav class="category-nav" aria-label="Categorías de la carta" data-category-nav hidden></nav>
+          <div data-menu-content></div>
+        </section>
+
+        <section id="cart" class="cart" aria-labelledby="cart-title">
+          <div class="cart__panel">
+            <h2 id="cart-title" tabindex="-1">Tu pedido</h2>
+            <p class="cart__empty" data-cart-empty>Tu pedido está vacío. Añade productos desde la carta.</p>
+            <ul class="cart__lines" data-cart-lines></ul>
+            <dl class="cart__total">
+              <dt>Total</dt>
+              <dd data-cart-total>0,00&nbsp;€</dd>
+            </dl>
+            <button type="button" class="button button--primary cart__confirm" data-cart-confirm>Confirmar pedido de demostración</button>
+            <div class="cart__notice" role="status" data-cart-notice></div>
+            <p class="cart__note">Esto es una demostración: no se envía ningún pedido al restaurante, no se cobra nada y no pedimos datos personales.</p>
+          </div>
+        </section>
+      </div>
+
+      <a class="cart-bar" href="#cart" data-cart-bar hidden></a>
+      <p class="visually-hidden" role="status" data-announcer></p>
+
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <div class="container" data-contact></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Web de demostración: los pedidos son simulados y no se envían al restaurante.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "fratelli-pizzeria",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web estática de demostración de Pizzería Fratelli",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "engines": {
+    "node": ">=26.13.0 <27"
+  },
+  "scripts": {
+    "start": "serve --listen tcp://127.0.0.1:3000 --no-clipboard --no-port-switching .",
+    "test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:e2e": "playwright test",
+    "test": "npm run test:unit && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "jest": "30.5.2",
+    "serve": "14.2.6"
+  }
+}
