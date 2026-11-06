@@ -161,3 +161,8 @@ There are no safe parallel implementation tasks for this story because its conta
 - Tests are required by the constitution and must fail before the corresponding implementation.
 - Keep order/cart state in memory only; never add a real order API, payment, personal-data form or runtime Tipsi call.
 - Keep `package-lock.json` versioned, keep Yarn lockfiles ignored, and do not commit local agent tooling ignored by `.gitignore`.
+
+## Phase 7: Convergence
+
+- [ ] T025 Measure first-product visibility in five cold-cache runs on a representative mid/low-range PC and record the device, browser and results in `specs/001-pizzeria-web/quickstart.md`; require every run to be under 3 seconds per SC-006 (partial).
+- [ ] T026 Conduct the five-person usability checks for product discovery and demo ordering, contact discovery, and visual clarity; record participant outcomes in `specs/001-pizzeria-web/quickstart.md` and verify the four-of-five thresholds per SC-001, SC-002 and SC-004 (partial).
