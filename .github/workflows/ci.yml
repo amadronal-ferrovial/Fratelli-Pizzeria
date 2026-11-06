@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [dev, main]
+
+permissions:
+  contents: read
+
+jobs:
+  pr-rules:
+    name: pr-rules
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validar rama de origen y destino
+        env:
+          HEAD: ${{ github.head_ref }}
+          BASE: ${{ github.base_ref }}
+        run: |
+          if [ "$BASE" = "main" ] && [ "$HEAD" != "dev" ]; then
+            echo "::error::Solo dev puede fusionarse en main. Abre tu PR contra dev."
+            exit 1
+          fi
+          if [ "$BASE" = "dev" ] && ! echo "$HEAD" | grep -Eq '^issue/[a-z0-9][a-z0-9._-]*$'; then
+            echo "::error::La rama debe llamarse issue/<nombre-del-issue> (minúsculas, números, - . _)."
+            exit 1
+          fi
+
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '26.13.0'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
