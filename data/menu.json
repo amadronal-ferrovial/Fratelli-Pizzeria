@@ -1,0 +1,1004 @@
+{
+  "restaurant": {
+    "name": "Pizzería Fratelli",
+    "description": "Restaurante de comida italiana especializado en la elaboración de pastas rellenas caseras y unas de las mejores pizzas que puedan probar. Todo elaborado con productos frescos. Un lugar espectacular en pleno barrio de Aluche.",
+    "phone": "+34 918 28 50 61",
+    "address": "Calle Quero, 83-85, 28024 Madrid, España",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=40.389442%2C-3.760339"
+  },
+  "menu": {
+    "menuId": "carta-comida",
+    "name": "Carta de comida",
+    "categories": [
+      {
+        "id": "entrantes",
+        "name": "Entrantes",
+        "order": 1
+      },
+      {
+        "id": "nuestras-pastas",
+        "name": "Nuestras Pastas",
+        "order": 2
+      },
+      {
+        "id": "pizzas-medianas",
+        "name": "Pizzas Medianas",
+        "order": 3
+      },
+      {
+        "id": "pizzas-familiares",
+        "name": "Pizzas Familiares",
+        "order": 4
+      },
+      {
+        "id": "postres-caseros",
+        "name": "Postres Caseros",
+        "order": 5
+      }
+    ],
+    "products": [
+      {
+        "id": "camembert-frito",
+        "categoryId": "entrantes",
+        "name": "CAMEMBERT FRITO",
+        "description": "Con surtido de mermelada",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1045
+          }
+        ]
+      },
+      {
+        "id": "crepe-de-gambas",
+        "categoryId": "entrantes",
+        "name": "CREPE DE GAMBAS",
+        "description": "Relleno de cebolla, pimiento asado, con crema de mariscos y Gambas",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1295
+          }
+        ]
+      },
+      {
+        "id": "ens-siempre",
+        "categoryId": "entrantes",
+        "name": "ENS. SIEMPRE",
+        "description": "Lechuga, tomate, cebolla, maiz, atun, aceitunas y huevo duro",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 995
+          }
+        ]
+      },
+      {
+        "id": "ens-cesar",
+        "categoryId": "entrantes",
+        "name": "ENS. CESAR",
+        "description": "Lechuga, picatostes, Parmesano, Pollo, bacon, y salsa cesar (con anchoas)",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 995
+          }
+        ]
+      },
+      {
+        "id": "ens-aguacate",
+        "categoryId": "entrantes",
+        "name": "ENS AGUACATE",
+        "description": "Mix de lechuga, pico de gallo, reduccion de crema de mariscos y pimiento, gambones, aguacate y sal negra.",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1395
+          }
+        ]
+      },
+      {
+        "id": "ens-fratelli",
+        "categoryId": "entrantes",
+        "name": "ENS. FRATELLI",
+        "description": "Mix de lechugas, queso de cabra, bacon, tomate cherry y aliño de frutos secos caramelizados.",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1195
+          }
+        ]
+      },
+      {
+        "id": "pan-de-ajo",
+        "categoryId": "entrantes",
+        "name": "PAN DE AJO",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 345
+          }
+        ]
+      },
+      {
+        "id": "pollo-fratelli",
+        "categoryId": "entrantes",
+        "name": "POLLO FRATELLI",
+        "description": "Tiras de pollo rebozadas con salsa de yogurt, hierbas y ajo",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 945
+          }
+        ]
+      },
+      {
+        "id": "provoleta",
+        "categoryId": "entrantes",
+        "name": "PROVOLETA",
+        "description": "Con salsa de tomate acompañado de foccacia",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 995
+          }
+        ]
+      },
+      {
+        "id": "capelli-de-foie",
+        "categoryId": "nuestras-pastas",
+        "name": "CAPELLI DE FOIE",
+        "description": "Con salsa de setas y trufas",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1495
+          }
+        ]
+      },
+      {
+        "id": "giganti-espinaca",
+        "categoryId": "nuestras-pastas",
+        "name": "GIGANTI ESPINACA",
+        "description": "Con salsa de salmón",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1395
+          }
+        ]
+      },
+      {
+        "id": "giganti-toro",
+        "categoryId": "nuestras-pastas",
+        "name": "GIGANTI TORO",
+        "description": "Con salsa de setas y trufas.",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1445
+          }
+        ]
+      },
+      {
+        "id": "lasana-bolonesa",
+        "categoryId": "nuestras-pastas",
+        "name": "LASAÑA BOLOÑESA",
+        "description": "Bechamel, carne picada, queso, jamon y tomate",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 995
+          }
+        ]
+      },
+      {
+        "id": "macarrones-bolonesa",
+        "categoryId": "nuestras-pastas",
+        "name": "MACARRONES BOLOÑESA",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 895
+          }
+        ]
+      },
+      {
+        "id": "macarrones-napoli",
+        "categoryId": "nuestras-pastas",
+        "name": "MACARRONES NAPOLI",
+        "description": "Con salsa de Tomate",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 845
+          }
+        ]
+      },
+      {
+        "id": "pasta-fratelli",
+        "categoryId": "nuestras-pastas",
+        "name": "PASTA FRATELLI",
+        "description": "1* Tortelloni negro relleno de crustáceos, salteado con tomate cherry, langostino, almeja, ajo y perejil.\n2* Oval relleno de cordero con setas y espinaca salteado con mantequilla y queso pecorino.",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1445
+          }
+        ]
+      },
+      {
+        "id": "ravioli-de-morcilla",
+        "categoryId": "nuestras-pastas",
+        "name": "RAVIOLI DE MORCILLA",
+        "description": "Rellenos de morcilla al pedro ximenes y cebolla caramelizada con salsa de semicurado",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1395
+          }
+        ]
+      },
+      {
+        "id": "rotelle-pulpo",
+        "categoryId": "nuestras-pastas",
+        "name": "ROTELLE PULPO",
+        "description": "Salteado con aceite, almejas, ajo, guindilla y perejil.",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1495
+          }
+        ]
+      },
+      {
+        "id": "spaghetti-carbonara",
+        "categoryId": "nuestras-pastas",
+        "name": "SPAGHETTI CARBONARA",
+        "description": "Con guanciale, huevo, parmesano y pimienta.",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1045
+          }
+        ]
+      },
+      {
+        "id": "suprema-de-pollo",
+        "categoryId": "nuestras-pastas",
+        "name": "SUPREMA DE POLLO",
+        "description": "Pechuga de pollo empanada rellena de jamon y queso, con salsa de nata champiñones y jamon",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1595
+          }
+        ]
+      },
+      {
+        "id": "med-barbacoa",
+        "categoryId": "pizzas-medianas",
+        "name": "MED BARBACOA",
+        "description": "Tomate, Mozzarella, Bacon, Cebolla, Champiñones, Carne de Ternera y Salsa de Barbacoa\n(NO SE QUITA LA CEBOLLA)",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1045
+          }
+        ]
+      },
+      {
+        "id": "med-caprichosa",
+        "categoryId": "pizzas-medianas",
+        "name": "MED CAPRICHOSA",
+        "description": "Tomate, Mozzarella, Jamón y Champiñones",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1045
+          }
+        ]
+      },
+      {
+        "id": "med-carbonara",
+        "categoryId": "pizzas-medianas",
+        "name": "MED CARBONARA",
+        "description": "Tomate, Mozzarella, Nata, Bacon, Cebolla, Parmesano y Huevo",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1095
+          }
+        ]
+      },
+      {
+        "id": "med-4-estaciones",
+        "categoryId": "pizzas-medianas",
+        "name": "MED 4 ESTACIONES",
+        "description": "Tomate, Mozzarella, Atun, Champiñones, Jamon, Alcachofa y Pimiento",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1045
+          }
+        ]
+      },
+      {
+        "id": "med-4-quesos",
+        "categoryId": "pizzas-medianas",
+        "name": "MED 4 QUESOS",
+        "description": "Tomate, Mozzarella, Roquefort, Provolone y Camembert",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 995
+          }
+        ]
+      },
+      {
+        "id": "med-del-chef",
+        "categoryId": "pizzas-medianas",
+        "name": "MED DEL CHEF",
+        "description": "Tomate, Mozzarella, Bacon, Cebolla y Gorgonzola",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1095
+          }
+        ]
+      },
+      {
+        "id": "med-delizia",
+        "categoryId": "pizzas-medianas",
+        "name": "MED DELIZIA",
+        "description": "Tomate, Mozzarella, Rulo de Bacon con Crema de Queso y Cebolla Morada",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1045
+          }
+        ]
+      },
+      {
+        "id": "med-di-mare",
+        "categoryId": "pizzas-medianas",
+        "name": "MED. DI MARE",
+        "description": "Tomate, Mozzarella, Mejillones, Langostinos y Salmon con un Toque de Ajo",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1145
+          }
+        ]
+      },
+      {
+        "id": "med-diavola",
+        "categoryId": "pizzas-medianas",
+        "name": "MED DIAVOLA",
+        "description": "Tomate, Mozzarella, Salami Picante y Guindilla",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 995
+          }
+        ]
+      },
+      {
+        "id": "med-fratelli",
+        "categoryId": "pizzas-medianas",
+        "name": "MED FRATELLI",
+        "description": "Tomate, Mozzarella, Carne de Kebab, Cebolla, Champiñones, Jalapeño y Salsa Kebab",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1095
+          }
+        ]
+      },
+      {
+        "id": "med-hawai",
+        "categoryId": "pizzas-medianas",
+        "name": "MED HAWAI",
+        "description": "Tomate, Mozzarella, Jamón y Piña",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 995
+          }
+        ]
+      },
+      {
+        "id": "med-kebab",
+        "categoryId": "pizzas-medianas",
+        "name": "MED KEBAB",
+        "description": "Tomate, Mozzarella, Carne de Kebab (Pollo), Tomate Fresco, Lechuga y Salsa Kebab",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1145
+          }
+        ]
+      },
+      {
+        "id": "med-margarita",
+        "categoryId": "pizzas-medianas",
+        "name": "MED MARGARITA",
+        "description": "Tomate y Mozzarella",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 895
+          }
+        ]
+      },
+      {
+        "id": "med-mexicana",
+        "categoryId": "pizzas-medianas",
+        "name": "MED MEXICANA",
+        "description": "Tomate, Mozzarella, Bacon, Champiñones, Boloñesa, Pimiento, Tabasco y Jalapeño",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1145
+          }
+        ]
+      },
+      {
+        "id": "med-napoli",
+        "categoryId": "pizzas-medianas",
+        "name": "MED NAPOLI",
+        "description": "Tomate, Mozzarella, Tomate Fresco, Ajo, Alcaparras, Aceitunas Negras y Anchoas",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 995
+          }
+        ]
+      },
+      {
+        "id": "med-pepperoni",
+        "categoryId": "pizzas-medianas",
+        "name": "MED PEPPERONI",
+        "description": "Tomate, Mozzarella y Pepperoni",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 995
+          }
+        ]
+      },
+      {
+        "id": "med-prosciutto",
+        "categoryId": "pizzas-medianas",
+        "name": "MED PROSCIUTTO",
+        "description": "Tomate, Mozzarella y Jamon",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 945
+          }
+        ]
+      },
+      {
+        "id": "med-rucula",
+        "categoryId": "pizzas-medianas",
+        "name": "MED RUCULA",
+        "description": "Tomate, Mozzarella, Tomate Cherry, Jamon Serrano, Rucula y Parmesano",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 995
+          }
+        ]
+      },
+      {
+        "id": "med-toscana",
+        "categoryId": "pizzas-medianas",
+        "name": "MED TOSCANA",
+        "description": "Tomate, Mozzarella, Jamon, Cebolla, Camembert y Huevo",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1045
+          }
+        ]
+      },
+      {
+        "id": "med-vegetal",
+        "categoryId": "pizzas-medianas",
+        "name": "MED VEGETAL",
+        "description": "Tomate, Mozzarella, Aceituna, Cebolla, Tomate Cherry, Calabacin, Champiñones, Berenjena, Alcachofa y Pimiento",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1045
+          }
+        ]
+      },
+      {
+        "id": "med-mes",
+        "categoryId": "pizzas-medianas",
+        "name": "MED MES",
+        "description": "BASE CALABAZA, TALEGGIO, GUANCIALE, PARMESANO Y ALBAHACA.",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1145
+          }
+        ]
+      },
+      {
+        "id": "p-barbacoa-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. BARBACOA FAM.",
+        "description": "Tomate, Mozzarella, Bacon, Cebolla, Champiñones, Carne de Ternera y Salsa de Barbacoa\n(NO SE QUITA LA CEBOLLA)",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2445
+          }
+        ]
+      },
+      {
+        "id": "p-caprichosa-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. CAPRICHOSA FAM.",
+        "description": "Tomate, Mozzarella, Jamón y Champiñones",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2245
+          }
+        ]
+      },
+      {
+        "id": "p-carbonara-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. CARBONARA FAM.",
+        "description": "Tomate, Mozzarella, Nata, Bacon, Cebolla, Parmesano y Huevo",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2545
+          }
+        ]
+      },
+      {
+        "id": "p-4-estaciones-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. 4 ESTACIONES FAM.",
+        "description": "Tomate, Mozzarella, Atun, Champiñones, Jamon, Alcachofa y Pimiento",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2445
+          }
+        ]
+      },
+      {
+        "id": "p-4-quesos-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. 4 QUESOS FAM.",
+        "description": "Tomate, Mozzarella, Roquefort, Provolone y Camembert",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2395
+          }
+        ]
+      },
+      {
+        "id": "p-del-chef-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. DEL CHEF FAM.",
+        "description": "Tomate, Mozzarella, Bacon, Cebolla y Gorgonzola",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2395
+          }
+        ]
+      },
+      {
+        "id": "p-delizia-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. DELIZIA FAM.",
+        "description": "Tomate, Mozzarella, Rulo de Bacon con Crema de Queso y Cebolla Morada",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2295
+          }
+        ]
+      },
+      {
+        "id": "p-di-mare-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. DI MARE FAM.",
+        "description": "Tomate, Mozzarella, Mejillones, Langostinos y Salmon con un Toque de Ajo",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2645
+          }
+        ]
+      },
+      {
+        "id": "p-diavola-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. DIÁVOLA FAM.",
+        "description": "Tomate, Mozzarella, Salami Picante y Guindilla",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2245
+          }
+        ]
+      },
+      {
+        "id": "p-fratelli-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. FRATELLI FAM.",
+        "description": "Tomate, Mozzarella, Carne de Kebab, Cebolla, Champiñones, Jalapeño y Salsa Kebab",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2595
+          }
+        ]
+      },
+      {
+        "id": "p-hawaii-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. HAWAII FAM.",
+        "description": "Tomate, Mozzarella, Jamón y Piña",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2245
+          }
+        ]
+      },
+      {
+        "id": "p-kebab-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. KEBAB FAM.",
+        "description": "Tomate, Mozzarella, Carne de Kebab (Pollo), Tomate Fresco, Lechuga y Salsa Kebab",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2545
+          }
+        ]
+      },
+      {
+        "id": "p-margarita-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. MARGARITA FAM.",
+        "description": "Tomate y Mozzarella",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1895
+          }
+        ]
+      },
+      {
+        "id": "p-mexicana-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. MEXICANA FAM.",
+        "description": "Tomate, Mozzarella, Bacon, Champiñones, Boloñesa, Pimiento, Tabasco y Jalapeño",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2545
+          }
+        ]
+      },
+      {
+        "id": "p-napoli-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. NAPOLI FAM.",
+        "description": "Tomate, Mozzarella, Tomate Fresco, Ajo, Alcaparras, Aceitunas Negras y Anchoas",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2245
+          }
+        ]
+      },
+      {
+        "id": "p-pepperoni-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. PEPPERONI FAM.",
+        "description": "Tomate, Mozzarella y Pepperoni",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2045
+          }
+        ]
+      },
+      {
+        "id": "p-prosciutto-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. PROSCIUTTO FAM.",
+        "description": "Tomate, Mozzarella y Jamon",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 1995
+          }
+        ]
+      },
+      {
+        "id": "p-rucula-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. RÚCULA FAM.",
+        "description": "Tomate, Mozzarella, Tomate Cherry, Jamon Serrano, Rucula y Parmesano",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2545
+          }
+        ]
+      },
+      {
+        "id": "p-toscana-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. TOSCANA FAM.",
+        "description": "Tomate, Mozzarella, Jamon, Cebolla, Camembert y Huevo",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2345
+          }
+        ]
+      },
+      {
+        "id": "p-vegetal-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "P. VEGETAL FAM.",
+        "description": "Tomate, Mozzarella, Aceituna, Cebolla, Tomate Cherry, Calabacin, Champiñones, Berenjena, Alcachofa y Pimiento",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2245
+          }
+        ]
+      },
+      {
+        "id": "pizza-mes-fam",
+        "categoryId": "pizzas-familiares",
+        "name": "PIZZA MES FAM",
+        "description": "BASE CALABAZA, TALEGGIO, GUANCIALE, PARMESANO Y ALBAHACA.",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 2545
+          }
+        ]
+      },
+      {
+        "id": "flan-de-turron",
+        "categoryId": "postres-caseros",
+        "name": "FLAN DE TURRÓN",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 595
+          }
+        ]
+      },
+      {
+        "id": "pannacotta-blanca",
+        "categoryId": "postres-caseros",
+        "name": "PANNACOTTA BLANCA",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 595
+          }
+        ]
+      },
+      {
+        "id": "pannacotta-nutella",
+        "categoryId": "postres-caseros",
+        "name": "PANNACOTTA NUTELLA",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 595
+          }
+        ]
+      },
+      {
+        "id": "postre-fratelli",
+        "categoryId": "postres-caseros",
+        "name": "POSTRE FRATELLI",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 645
+          }
+        ]
+      },
+      {
+        "id": "tarta-de-queso",
+        "categoryId": "postres-caseros",
+        "name": "TARTA DE QUESO",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 645
+          }
+        ]
+      },
+      {
+        "id": "tiramisu-clasico",
+        "categoryId": "postres-caseros",
+        "name": "TIRAMISÚ CLÁSICO",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 645
+          }
+        ]
+      },
+      {
+        "id": "tiramisu-pistacho",
+        "categoryId": "postres-caseros",
+        "name": "TIRAMISÚ PISTACHO",
+        "available": true,
+        "formats": [
+          {
+            "id": "formato-unico",
+            "name": "Formato Unico",
+            "priceCents": 695
+          }
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "verifiedOn": "2026-11-06",
+    "menu": "https://order.tipsipro.com/restaurants/95e4d962-dc79-427c-9e9d-6746276a7c9e?menu=72d151fb-b719-6539-aa66-6f5cbb617f88",
+    "contact": "https://www.tripadvisor.es/Restaurant_Review-g187514-d10670751-Reviews-Pizzeria_Fratelli-Madrid.html"
+  }
+}
