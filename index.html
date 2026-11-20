@@ -1,11 +1,29 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="system" data-text-size="normal">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pizzería Fratelli · Pizzas y pastas caseras en Madrid</title>
     <meta name="description" content="Carta de Pizzería Fratelli en Aluche (Madrid): entrantes, pastas caseras, pizzas medianas y familiares y postres. Prepara un pedido de demostración y encuentra cómo contactar.">
-    <meta name="theme-color" content="#a3120f">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" id="theme-color" content="#a3120f">
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var themes = ['system', 'light', 'dark'];
+        var sizes = ['normal', 'large', 'xlarge'];
+        var storedTheme = null;
+        var storedSize = null;
+        try { storedTheme = localStorage.getItem('fratelli.appearance.theme'); } catch (error) {}
+        try { storedSize = localStorage.getItem('fratelli.appearance.textSize'); } catch (error) {}
+        root.dataset.theme = themes.indexOf(storedTheme) > -1 ? storedTheme : 'system';
+        root.dataset.textSize = sizes.indexOf(storedSize) > -1 ? storedSize : 'normal';
+        var meta = document.getElementById('theme-color');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var isDark = root.dataset.theme === 'dark' || (root.dataset.theme === 'system' && prefersDark);
+        if (meta) meta.setAttribute('content', isDark ? '#4a0f0c' : '#a3120f');
+      })();
+    </script>
     <link rel="preload" href="data/menu.json" as="fetch" type="application/json" crossorigin>
     <link rel="stylesheet" href="styles/site.css">
     <script type="module" src="scripts/app.js"></script>
@@ -19,10 +37,28 @@
         <nav aria-label="Navegación principal">
           <ul class="site-nav">
             <li><a href="#menu">Carta</a></li>
-            <li><a href="#cart">Tu pedido <span class="cart-badge" data-cart-count hidden></span></a></li>
+            <li><a href="#cart"><span class="nav-label-full">Tu pedido</span><span class="nav-label-short" aria-hidden="true">Pedido</span> <span class="cart-badge" data-cart-count hidden></span></a></li>
             <li><a href="#contact">Contacto</a></li>
           </ul>
         </nav>
+        <div class="appearance-controls" role="group" aria-label="Apariencia de la página">
+          <div class="appearance-control">
+            <label for="appearance-theme">Tema</label>
+            <select id="appearance-theme" data-appearance="theme">
+              <option value="system">Seguir el sistema</option>
+              <option value="light">Claro</option>
+              <option value="dark">Oscuro</option>
+            </select>
+          </div>
+          <div class="appearance-control">
+            <label for="appearance-text-size">Texto</label>
+            <select id="appearance-text-size" data-appearance="text-size">
+              <option value="normal">Normal</option>
+              <option value="large">Grande</option>
+              <option value="xlarge">Muy grande</option>
+            </select>
+          </div>
+        </div>
       </div>
     </header>
 
