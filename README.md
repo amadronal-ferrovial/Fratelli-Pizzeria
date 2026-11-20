@@ -2,7 +2,7 @@
 
 Repositorio con fines educativos, utilizado para hacer onboardings de tecnología SDD. Simula la web de la pizzeria Fratelli, para que puedan practicar los developers.
 
-La web es una página estática en español (HTML, CSS y módulos JavaScript, sin framework ni paso de compilación) que muestra la carta de comida de Pizzería Fratelli, el teléfono y la dirección, y un **pedido de demostración**: la cesta vive solo en memoria y al confirmar no se envía nada al restaurante, no se cobra y no se piden datos personales.
+La web es una página estática en español (HTML, CSS y módulos JavaScript, sin framework ni paso de compilación) que muestra la carta de comida de Pizzería Fratelli, el teléfono y la dirección, y un **pedido de demostración**: la cesta vive solo en memoria y al confirmar no se envía nada al restaurante, no se cobra y no se piden datos personales. La cabecera incluye controles visibles para elegir el **tema** (Seguir el sistema / Claro / Oscuro) y el **tamaño del texto** (Normal / Grande / Muy grande); ambas preferencias se recuerdan solo en este navegador y no se envían a ningún servicio.
 
 ## Requisitos
 
@@ -18,12 +18,25 @@ npm run start
 
 Abre <http://127.0.0.1:3000>. El servidor (`serve`) escucha solo en `127.0.0.1:3000`, no cambia de puerto si está ocupado y no copia nada al portapapeles. Es una herramienta de desarrollo, **no** un servidor de producción.
 
+## Apariencia y accesibilidad
+
+Los dos controles de la cabecera funcionan sin recargar y se recuerdan por separado en `localStorage`:
+
+| Control | Clave guardada | Valores |
+|---|---|---|
+| Tema | `fratelli.appearance.theme` | `system`, `light`, `dark` |
+| Texto | `fratelli.appearance.textSize` | `normal`, `large`, `xlarge` |
+
+Sin elección previa se sigue la preferencia del sistema; si el sistema no indica ninguna, se muestra el aspecto claro. Elegir «Seguir el sistema» vuelve a depender del dispositivo, también cuando cambia con la página abierta. «Normal» es el tamaño actual, «Grande» lo aumenta un 15 % y «Muy grande» un 30 %.
+
+El estado se fija con un script síncrono en `<head>` antes de la hoja de estilos, para evitar parpadeos. El tema se resuelve con `data-theme` y variables CSS; el tamaño, con `--font-scale`. Si el navegador bloquea `localStorage`, los controles siguen funcionando durante la visita sin mostrar errores. Cambiar la apariencia no toca la cesta, no crea pedidos ni envía peticiones: no se recogen datos personales.
+
 ## Tests
 
 ```sh
 npx playwright install chromium   # solo la primera vez
-npm run test:unit                 # Jest: lógica de cesta y validación de data/menu.json
-npm run test:e2e                  # Playwright (Chromium): recorridos del cliente
+npm run test:unit                 # Jest: cesta, apariencia, contraste y validación de data/menu.json
+npm run test:e2e                  # Playwright (Chromium): carta, cesta y apariencia
 npm test                          # ambos
 ```
 
@@ -34,11 +47,13 @@ Playwright arranca `npm run start` automáticamente. Jest se ejecuta en modo ESM
 ```text
 index.html             Estructura semántica de la página
 styles/site.css        Estilos (fuentes del sistema, sin recursos externos)
-scripts/app.js         Carga data/menu.json y gestiona la interfaz
+scripts/app.js         Carga data/menu.json, gestiona la interfaz y conecta los controles de apariencia
+scripts/appearance.js  Normalización y persistencia de tema y tamaño, sin DOM (probada con Jest)
 scripts/cart.js        Reglas de cesta y precios, sin DOM (probadas con Jest)
 data/menu.json         Restaurante y carta de comida
 tests/unit/            Tests de Jest
 tests/e2e/             Tests de Playwright
+tests/helpers/         Cálculo de contraste WCAG sin dependencias nuevas
 ```
 
 ## Actualizar la carta y los datos del restaurante

@@ -8,8 +8,18 @@ import {
   removeLine,
   setQuantity,
 } from './cart.js';
+import {
+  TEXT_SIZE_STORAGE_KEY,
+  THEME_STORAGE_KEY,
+  normalizeTextSize,
+  normalizeTheme,
+  resolveTheme,
+  writePreference,
+} from './appearance.js';
 
 const MENU_URL = 'data/menu.json';
+const THEME_COLOR = Object.freeze({ light: '#a3120f', dark: '#4a0f0c' });
+const systemDarkQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
 const priceFormatter = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' });
 const formatPrice = (cents) => priceFormatter.format(cents / 100);
@@ -163,6 +173,55 @@ function renderContact(restaurant) {
       ),
     ),
   );
+}
+
+/* --------------------------------------------------------------------------
+   Appearance preferences (only DOM attributes, localStorage and theme-color)
+   -------------------------------------------------------------------------- */
+
+function syncThemeColor() {
+  const meta = document.getElementById('theme-color');
+  if (!meta) return;
+  const choice = normalizeTheme(document.documentElement.dataset.theme);
+  meta.setAttribute('content', THEME_COLOR[resolveTheme(choice, systemDarkQuery.matches)]);
+}
+
+function changeTheme(value) {
+  const theme = normalizeTheme(value);
+  document.documentElement.dataset.theme = theme;
+  writePreference(window.localStorage, THEME_STORAGE_KEY, theme);
+  syncThemeColor();
+}
+
+function changeTextSize(value) {
+  const textSize = normalizeTextSize(value);
+  document.documentElement.dataset.textSize = textSize;
+  writePreference(window.localStorage, TEXT_SIZE_STORAGE_KEY, textSize);
+}
+
+function initAppearance() {
+  const themeSelect = document.querySelector('[data-appearance="theme"]');
+  const textSelect = document.querySelector('[data-appearance="text-size"]');
+  if (!themeSelect || !textSelect) return;
+
+  const root = document.documentElement;
+  root.dataset.theme = normalizeTheme(root.dataset.theme);
+  root.dataset.textSize = normalizeTextSize(root.dataset.textSize);
+  themeSelect.value = root.dataset.theme;
+  textSelect.value = root.dataset.textSize;
+  syncThemeColor();
+
+  themeSelect.addEventListener('change', () => changeTheme(themeSelect.value));
+  textSelect.addEventListener('change', () => changeTextSize(textSelect.value));
+
+  const onSystemChange = () => {
+    if (root.dataset.theme === 'system') syncThemeColor();
+  };
+  if (typeof systemDarkQuery.addEventListener === 'function') {
+    systemDarkQuery.addEventListener('change', onSystemChange);
+  } else {
+    systemDarkQuery.addListener(onSystemChange);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -396,6 +455,7 @@ async function loadData() {
 }
 
 async function init() {
+  initAppearance();
   initCart();
   let data;
   try {
