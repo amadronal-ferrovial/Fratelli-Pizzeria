@@ -114,7 +114,7 @@
 - [x] T026 Ejecutar `npm test` completo con Node 26.13.0 y Chromium instalado. Verificación: todos los tests de `cart.test.js`, `menu-data.test.js`, `contrast.test.js`, `appearance.test.js`, `menu.spec.js` y `appearance.spec.js` pasan; registrar el total.
 - [x] T027 Ejecutar las comprobaciones manuales 1–9 de `specs/002-apariencia-accesible/quickstart.md` en Chromium, en escritorio y a 360 px, incluido el cambio de preferencia del sistema desde el sistema operativo. Verificación: cada paso queda anotado como Correcto/Incorrecto en el registro de validación.
 - [x] T028 Ejecutar el estudio de usabilidad SC-001 y SC-002 con cinco participantes; si no hay participantes disponibles, dejar la tabla de `quickstart.md` marcada explícitamente como pendiente con el motivo. Verificación: la tabla está completa o tiene el estado pendiente justificado.
-- [ ] T029 Crear el PR contra `dev` con `Closes #N`, título Conventional Commit (`feat: apariencia accesible…`) y referencia a este `tasks.md`. Verificación: CI pasa, no se ha hecho push a `main` ni a `dev`, y el PR incluye los artefactos de Spec Kit.
+- [x] T029 Crear el PR contra `dev` con `Closes #5`, título Conventional Commit (`feat: apariencia accesible…`) y referencia a este `tasks.md`. Verificación: PR #15 abierto contra `dev` desde el fork (la sesión local de `gh` solo tiene permiso de lectura en el repositorio de la organización); no se ha hecho push a `main` ni a `dev`; el PR incluye los artefactos de Spec Kit y `npm test` está en verde (78/78). El workflow de CI quedó en `action_required`: GitHub pide la aprobación de un mantenedor al ser el primer PR desde este fork.
 
 ---
 
